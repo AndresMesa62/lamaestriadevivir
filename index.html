@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>La Maestría de Vivir - el Podcast</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="podcast, desarrollo personal, transformación, bienestar, salud mental" name="keywords">
+    <meta content="La Maestría de Vivir es un podcast y movimiento de transformación personal guiado por Alegría Jaramillo y Luz Dary Correa." name="description">
+
+    <!-- Favicon -->
+    <link href="assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- Libraries Stylesheet -->
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar" style="background-color: #687DEA;">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="./" class="navbar-brand px-lg-4 m-0">
+                <h3 class="m-0" style="color: #D1EEDD;">La Maestría de Vivir</h3>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4">
+                    <a href="./" class="nav-item nav-link active">Inicio</a>
+                    <a href="#nosotras" class="nav-item nav-link">Sobre Nosotros</a>
+                    <a href="#servicios" class="nav-item nav-link">Servícios</a>
+                    <a href="#aliados" class="nav-item nav-link">Vincúlate Como Aliado</a>
+                    <a href="#contacto" class="nav-item nav-link">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Estilos para altura responsive -->
+<style>
+.carousel-mobile {
+    height: 100vh; /* Altura completa en desktop */
+}
+
+.carousel-mobile .carousel-inner,
+.carousel-mobile .carousel-item {
+    height: 100%;
+}
+
+.carousel-mobile .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .carousel-mobile {
+        height: 70vh; /* 70% de la altura de la pantalla en móviles */
+    }
+    
+    .social-buttons-mobile {
+        bottom: 30px !important;
+        left: 15px !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: calc(100% - 30px) !important;
+    }
+    
+    .social-btn-mobile {
+        padding: 8px 14px !important;
+        font-size: 12px !important;
+        flex: 1 !important;
+        justify-content: center !important;
+    }
+    
+    .social-btn-mobile i {
+        margin-right: 6px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-mobile {
+        height: 60vh; /* 60% de la altura en pantallas muy pequeñas */
+    }
+    
+    .social-btn-mobile {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+    }
+}
+</style>
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div id="blog-carousel" class="carousel slide overlay-bottom carousel-mobile" data-ride="carousel" style="position: relative;">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="position: relative;">
+                <img class="w-100" src="assets/img/carousel-1.jpg" alt="Image">
+                <!-- Botones sociales -->
+                <div class="social-buttons-mobile" style="position: absolute; bottom: 60px; left: 40px; z-index: 10; display: flex; flex-direction: column; gap: 12px;">
+                    <a href="https://www.youtube.com/@LaMaestriadeVivir" class="social-btn-mobile" style="display: inline-flex; align-items: center; padding: 12px 18px; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; border-radius: 15px; font-weight: 600; font-size: 13px; transition: all 0.4s ease; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(12px); border: 2px solid #CC4125; transform: translateY(0);" onmouseover="this.style.background='rgba(204, 65, 37, 0.9)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(204, 65, 37, 0.4)';" onmouseout="this.style.background='rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 12px rgba(0, 0, 0, 0.2)';">
+                        <i class="fab fa-youtube" style="margin-right: 10px; font-size: 16px; color: #CC4125; transition: all 0.3s ease;"></i>
+                        Escúchanos en YouTube
+                    </a>
+                    <a href="https://open.spotify.com/show/2aLwbGB4IdTdkDhIsMtAei?si=793fdaab14614299&nd=1&dlsi=2ded7b35b9534482" class="social-btn-mobile" style="display: inline-flex; align-items: center; padding: 12px 18px; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; border-radius: 15px; font-weight: 600; font-size: 13px; transition: all 0.4s ease; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(12px); border: 2px solid #1ED760; transform: translateY(0);" onmouseover="this.style.background='rgba(30, 215, 96, 0.9)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(30, 215, 96, 0.4)';" onmouseout="this.style.background='rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 12px rgba(0, 0, 0, 0.2)';">
+                        <i class="fab fa-spotify" style="margin-right: 10px; font-size: 16px; color: #1ED760; transition: all 0.3s ease;"></i>
+                        Escúchanos en Spotify
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+                <img class="w-100" src="assets/img/carousel-2.jpg" alt="Image">
+                <!-- Botones sociales -->
+                <div class="social-buttons-mobile" style="position: absolute; bottom: 60px; left: 40px; z-index: 10; display: flex; flex-direction: column; gap: 12px;">
+                    <a href="https://www.youtube.com/@LaMaestriadeVivir" class="social-btn-mobile" style="display: inline-flex; align-items: center; padding: 12px 18px; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; border-radius: 15px; font-weight: 600; font-size: 13px; transition: all 0.4s ease; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(12px); border: 2px solid #CC4125; transform: translateY(0);" onmouseover="this.style.background='rgba(204, 65, 37, 0.9)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(204, 65, 37, 0.4)';" onmouseout="this.style.background='rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 12px rgba(0, 0, 0, 0.2)';">
+                        <i class="fab fa-youtube" style="margin-right: 10px; font-size: 16px; color: #CC4125; transition: all 0.3s ease;"></i>
+                        Escúchanos en YouTube
+                    </a>
+                    <a href="https://open.spotify.com/show/2aLwbGB4IdTdkDhIsMtAei?si=793fdaab14614299&nd=1&dlsi=2ded7b35b9534482" class="social-btn-mobile" style="display: inline-flex; align-items: center; padding: 12px 18px; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; border-radius: 15px; font-weight: 600; font-size: 13px; transition: all 0.4s ease; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); backdrop-filter: blur(12px); border: 2px solid #1ED760; transform: translateY(0);" onmouseover="this.style.background='rgba(30, 215, 96, 0.9)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(30, 215, 96, 0.4)';" onmouseout="this.style.background='rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 3px 12px rgba(0, 0, 0, 0.2)';">
+                        <i class="fab fa-spotify" style="margin-right: 10px; font-size: 16px; color: #1ED760; transition: all 0.3s ease;"></i>
+                        Escúchanos en Spotify
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div><!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="nosotras">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">¿Quiénes Somos?</h4>
+                <br>
+                <p style="padding: 0% 20% 0% 20%;">La Maestría de Vivir es además de un podcast, una oportunidad para conectar
+                con lo esencial y con nuevas formas de vivir guiado por la voz de Alegría Jaramillo y la sabiduría de Luz Dary Correa.
+                </p>
+                <p style="padding: 0% 20% 0% 20%;">
+                Somos un movimiento que cree en la transformación a través del cuerpo, la palabra, el servicio y la conexión con el ser.
+                </p>
+                <h1 class="display-4">Un Movimiento que Transforma</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3">Nuestra Historia</h1>
+                    <p>La Maestría de Vivir nace de conversaciones profundas entre dos amigas, que descubren temas que trascienden lo cotidiano. En medio de espacios laborales, se dieron cuenta de lo que sucedía al integrar sus talentos y el impacto que podría generar al compartirse con el mundo.</p>
+                    <a href="#servicios" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Conoce más</a>
+                </div>
+                <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="assets/img/about.png" style="object-fit: cover;" alt="Alegría y Luz Dary">
+                    </div>
+                </div>
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3">Nuestro Propósito</h1>
+                    <p>Creemos en la fuerza de la conversación como herramienta de transformación. Integramos desarrollo personal, liderazgo consciente y cultura organizacional para impactar tanto a individuos como a equipos.</p>
+                    <h4>Así lo hacemos:</h4>
+                    <br>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Podcast</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Espacios de aprendizaje</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Experiencias de marca</h5>
+                    <a href="#aliados" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Vincúlate como aliado</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Servicios Start -->
+    <div class="container-fluid pt-5" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros 3 Pilares</h4>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/IMG_5837.jpg" alt="Podcast">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fas fa-podcast service-icon"></i>Podcast</h4>
+                            <p class="m-0">Conversaciones con propósito sobre salud mental, desarrollo personal y la vida cotidiana.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/IMG_8659.JPG" alt="Aliados">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fas fa-handshake service-icon"></i>Espacios de Aprendizaje</h4>
+                            <p class="m-0">Encuentros presenciales de formación experiencial: Bootcamp, conversatorios, talleres y conferencias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/IMG_2033.JPG" alt="Experiencias">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fas fa-lightbulb service-icon"></i>Experiencias de Marca</h4>
+                            <p class="m-0">Momentos que vivimos y recomendamos para inspirar nuevos destinos. (Colaboración con marcas).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Servicios End -->
+
+    <!-- Paquetes Start -->
+<div class="container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom" id="aliados" style="background: linear-gradient(135deg, #687DEA 0%, #8B7ED8 100%); position: relative; overflow: hidden;">
+    <!-- Elementos decorativos -->
+    <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
+    <div style="position: absolute; bottom: -30px; left: -30px; width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.4;"></div>
+    
+    <div class="container py-5" style="z-index: 2; position: relative;">
+        <h1 class="text-white mb-3" style="font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">Vincúlate como Aliado</h1>
+        <h4 class="text-white font-weight-normal mb-5 pb-3" style="opacity: 0.95; font-weight: 300;">Te invitamos a ser parte de nuestro movimiento con los paquetes de patrocinio o colaboración estratégica. ¡Haz que tu marca sea parte activa del impacto que hacemos en el mundo!</h4>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; transform: translateY(0); cursor: pointer;" onclick="contactWhatsApp('Corporativo')">
+                    <div class="card-body p-4" style="position: relative;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 30px; height: 6px; background: linear-gradient(90deg, #687DEA, #8B7ED8); border-radius: 3px;"></div>
+                        <h3 class="text-primary mb-4" style="font-weight: 600; margin-top: 20px; color: #687DEA !important;">Paquete Corporativo</h3>
+                        <p>Para marcas, productos o empresas privadas</p>
+                        <ul class="text-left" style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Visibilidad en podcast y redes
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Spot con voz profesional
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Historias y reels
+                            </li>
+                            <li style="padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Compensación financiera o canje
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); transition: all 0.3s ease; transform: translateY(-10px); position: relative; cursor: pointer;" onclick="contactWhatsApp('Institucional')">
+                    <div class="card-body p-4" style="position: relative;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 30px; height: 6px; background: linear-gradient(90deg, #FF6B6B, #FF8E53); border-radius: 3px;"></div>
+                        <div style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #FF6B6B, #FF8E53); color: white; padding: 5px 12px; border-radius: 15px; font-size: 12px; font-weight: 600;">POPULAR</div>
+                        <h3 class="text-primary mb-4" style="font-weight: 600; margin-top: 20px; color: #687DEA !important;">Paquete Institucional</h3>
+                        <p>Para entidades públicas, privadas, ONG o fundaciones</p>
+                        <ul class="text-left" style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Talleres personalizados
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Memoria audiovisual
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Visibilidad en redes
+                            </li>
+                            
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Diagnóstico previo + certificado de asistencia
+                            </li>
+                            <li style="padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Modalidad presencial/virtual
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; transform: translateY(0); cursor: pointer;" onclick="contactWhatsApp('Experiencial')">
+                    <div class="card-body p-4" style="position: relative;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 30px; height: 6px; background: linear-gradient(90deg, #687DEA, #8B7ED8); border-radius: 3px;"></div>
+                        <h3 class="text-primary mb-4" style="font-weight: 600; margin-top: 20px; color: #687DEA !important;">Paquete Experiencial</h3>
+                        <p>Momentos que vivimos y recomendamos para inspirar nuevos destinos.</p>
+                        <ul class="text-left" style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Visita y registro audiovisual de la experiencia
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Reels, stories o blogs
+                            </li>
+                            <li style="margin-bottom: 12px; padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Reseña en podcast
+                            </li>
+                            <li style="padding-left: 25px; position: relative; color: #6c757d;">
+                                <i class="fas fa-check-circle" style="position: absolute; left: 0; top: 2px; color: #687DEA; font-size: 16px;"></i>
+                                Modalidad: canje por experiencia o inversión por campaña
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function contactWhatsApp(paquete) {
+    const telefono = '+573244748837';
+    const mensaje = `¡Hola! Me interesa conocer más información sobre el paquete ${paquete}. Me gustaría saber los detalles y cómo podemos trabajar juntos.`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+<style>
+.card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+}
+</style>
+<!-- Paquetes End -->
+<!-- Beneficios Start -->
+<div class="container-fluid pt-5" >
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h4 class="text-primary text-uppercase mb-3" style="letter-spacing: 3px; font-weight: 600; color: #687DEA !important; position: relative; display: inline-block;">
+                ¿Para qué aliarte con nosotros?
+                <span style="position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(90deg, #687DEA, #8B7ED8); border-radius: 2px;"></span>
+            </h4>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="p-4" style="background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid rgba(104, 125, 234, 0.1);">
+                    <div style="background: linear-gradient(135deg, #687DEA, #8B7ED8); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 25px rgba(104, 125, 234, 0.3);">
+                        <i class="fas fa-bullseye fa-2x" style="color: white;"></i>
+                    </div>
+                    <h4 style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Posicionamiento de Marca</h4>
+                    <p style="color: #6c757d; line-height: 1.6; margin: 0;">Potencia tu marca asociándote con un proyecto auténtico que cuenta con una audiencia comprometida y en constante crecimiento, garantizando visibilidad de calidad y conexiones genuinas.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="p-4" style="background: white; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); transition: all 0.3s ease; border: 1px solid rgba(104, 125, 234, 0.15); transform: translateY(-10px);">
+                    <div style="background: linear-gradient(135deg, #FF6B6B, #FF8E53); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);">
+                        <i class="fas fa-video fa-2x" style="color: white;"></i>
+                    </div>
+                    <h4 style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Contenido Audiovisual</h4>
+                    <p style="color: #6c757d; line-height: 1.6; margin: 0;">Recibe contenido audiovisual de alta calidad producido por profesionales, diseñado específicamente para maximizar el impacto de tu marca en todas las plataformas digitales y generar engagement real.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="p-4" style="background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid rgba(104, 125, 234, 0.1);">
+                    <div style="background: linear-gradient(135deg, #48CAE4, #0077B6); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 25px rgba(72, 202, 228, 0.3);">
+                        <i class="fas fa-heart fa-2x" style="color: white;"></i>
+                    </div>
+                    <h4 style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">Propósito Compartido</h4>
+                    <p style="color: #6c757d; line-height: 1.6; margin: 0;">Forma parte de una red transformadora enfocada en el crecimiento personal y organizacional, donde cada alianza se construye sobre valores compartidos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.col-lg-4:nth-child(1) .p-4:hover,
+.col-lg-4:nth-child(3) .p-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.col-lg-4:nth-child(2) .p-4:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+}
+</style>
+<!-- Beneficios End -->
+    <div class="container-fluid my-5 position-relative overlay-top overlay-bottom" style="background-color: #687DEA;" id="contacto">
+    <div class="row align-items-center">
+        <div class="col-lg-6 my-5 my-lg-0">
+            <div class="p-5">
+                <div class="mb-4">
+                    <h1 class="text-white">Ahora sí, conversemos</h1>
+                </div>
+                <p class="text-white">Ya sea que quieras participar en nuestros talleres, colaborar con tu marca o simplemente conectarte, estamos aquí para conversar.</p>
+                <ul class="list-inline text-white m-0">
+                    <li class="py-2"><i class="fa fa-check mr-3" style="color: white;"></i>Respuesta en menos de 24 horas</li>
+                    <li class="py-2"><i class="fa fa-check mr-3" style="color: white;"></i>Soluciones personalizadas</li>
+                    <li class="py-2"><i class="fa fa-check mr-3" style="color: white;"></i>Alianzas con impacto real</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
+                <h1 class="text-white mb-4 mt-5">Contáctanos</h1>
+                <div class="mb-5">
+                    <a href="https://wa.me/3244748837" class="btn btn-success btn-block font-weight-bold py-4 mb-3" target="_blank" style="font-size: 1.25rem;">
+                        <i class="fab fa-whatsapp mr-2"></i> Envíanos un WhatsApp
+                    </a>
+                    <a href="mailto:lamaestriadevivir.1@gmail.com" class="btn btn-primary btn-block font-weight-bold py-4" style="font-size: 1.25rem;">
+                        <i class="far fa-envelope mr-2"></i> Envíanos un Correo
+                    </a>
+                </div>
+                <div class="text-white">
+                    <p>O escríbenos directamente:</p>
+                    <p><i class="fas fa-envelope mr-2" style="color: white;"></i>lamaestriadevivir.1@gmail.com</p>
+                    <p><i class="fas fa-phone mr-2" style="color: white;"></i>324 474 8837</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Testimonios Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Ellos nos recomiendan</h4>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">    
+                        <img class="img-fluid" src="img/tm1.png" alt="">
+                        <div class="ml-3">
+                            <h4>Fanory</h4>
+                            <i>FManía</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Súper, súper, me disfruté este espacio de principio a fin, todo lo que se hizo y se dijo ahí me encantó. Me quedo con la tarea de tomar conciencia y ustedes llegaron con esas palabras que impactan"</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm2.png" alt="">
+                        <div class="ml-3">
+                            <h4>Natalia</h4>
+                            <i>Coosanluis</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Hoy la Maestría de Vivir nos acompañó en un espacio supremamente valioso en nuestra empresa. Estamos muy agradecidos por el aprendizaje obtenido a través de una metodología experiencial que nos lleva a la reflexión y a la acción"</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm3.png" alt="">
+                        <div class="ml-3">
+                            <h4>Catherine Villa</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Agradecerte por el podcast del canal de YouTube porque han confrontado bastante y voy en camino de esa nueva Cathe… y bueno más adelante si quiera tener la consulta contigo, para contarte mi experiencia en este camino."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm4.png" alt="">
+                        <div class="ml-3">
+                            <h4>Estefanía Vélez</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Oye el último episodio de maestría de vivir Encuentro de Almas, bombastic, demasiado hermoso."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/th2.png" alt="">
+                        <div class="ml-3">
+                            <h4>Camilo Escobar</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Súper chévere. Creo que las empresas necesitan escucharlas, el mundo sería más feliz."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm5.png" alt="">
+                        <div class="ml-3">
+                            <h4>Claudia Marulanda</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Me gustó mucho el tema: todos sus temas son Chéveres."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm6.png" alt="">
+                        <div class="ml-3">
+                            <h4>Mariana Ríos</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Me pareció excelente, me llevo demasiadas enseñanzas de este espacio."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm7.png" alt="">
+                        <div class="ml-3">
+                            <h4>Gabriela Tello</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Del espacio me llevo que es muy importante escuchar al otro antes de dar un juicio o una respuesta."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/th1.png" alt="">
+                        <div class="ml-3">
+                            <h4>Andres Mesa</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Solo un problema con el podcast, es muy cortico, se me acaba muy rápido."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="img/tm4.png" alt="">
+                        <div class="ml-3">
+                            <h4>Marcela Gallego</h4>
+                            <i>Oyente</i>
+                        </div>
+                    </div>
+                    <p class="m-0">"Luzda y Alegría, que buen programa para este momento, nos invita a estar con los pies en la tierra sin renunciar a los sueños, pero sabiendo que estos solo se materializan desde la acción y no desde el pensamiento mágico. Gracias, muy bello programa."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonios End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid  text-white mt-5 pt-5 px-0 position-relative overlay-top" style="background-color: #687DEA;">
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Ubicación</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Medellín, Antioquia, COL</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+57 324 474 8837</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>lamaestriadevivir.1@gmail.com</p>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
+                <p>Mantente al tanto de todo lo que hacemos siguiendo nuestras redes sociales</p>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/lamaestriadevivir?igsh=M3Qxd2RkZDdzeGo="><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.tiktok.com/@lamaestriadevivir?_t=ZS-8yWpXPnNmYU&_r=1"><i class="fab fa-tiktok"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.youtube.com/@LaMaestriadeVivir"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://open.spotify.com/show/2aLwbGB4IdTdkDhIsMtAei?si=793fdaab14614299&nd=1&dlsi=2ded7b35b9534482"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">Copyright &copy; <b>La Maestría de Vivir</b>. Todos los Derechos Reservados.</a></p>
+            <p class="m-0 text-white">Diseñado por <a  href="https://colosalsoftware.com" style="color: white;font-weight: bold;">Colosal Software & Desarrollo</a></p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="assets/mail/jqBootstrapValidation.min.js"></script>
+    <script src="assets/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

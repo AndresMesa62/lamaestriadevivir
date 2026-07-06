@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* admin_styles.css */
+
+/* Selector para la imagen del logo en Jazzmin */
+.brand-link .brand-image {
+    max-height: 40px; /* Define la altura máxima deseada */
+    width: 60px;      /* Define el ancho deseado (cuidado: puede recortar o dejar espacio si la proporción no es 60x40 con object-fit: contain) */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin cortarse */
+    margin-left: 0rem;
+    border-radius: 0px;
+    /* --- NUEVO: Eliminar cualquier sombra de la imagen --- */
+    box-shadow: none !important; /* Sobrescribe cualquier sombra por defecto */
+    /* Algunas plantillas pueden tener bordes o transparencias que parezcan sombras,
+       si 'box-shadow: none' no funciona, podría ser necesario inspeccionar
+       el elemento para ver otras propiedades como 'filter' o 'border'. */
+}
+
+/* Ajustes al contenedor del logo */
+.brand-link {
+    height: 50px; /* Ajusta la altura del enlace contenedor si es necesario */
+    display: flex;
+    align-items: center; /* Alinear verticalmente el logo y el texto */
+    /* justify-content: center; */ /* Descomentar si quieres centrar horizontalmente siempre */
+    border-radius: 0px;
+    /* --- NUEVO: Eliminar cualquier sombra del contenedor del enlace --- */
+    box-shadow: none !important; /* Sobrescribe cualquier sombra por defecto en el contenedor */
+}
+
+body.sidebar-collapse .brand-link .brand-text {
+    display: none; /* Oculta el elemento de texto */
+}
+
+
+.main-footer .float-right {
+    display: none !important;
+}
+.main-sidebar .user-panel {
+    display: none !important;
+}
+#main-content {
+    overflow: hidden; /* Evita el desplazamiento horizontal */
+}

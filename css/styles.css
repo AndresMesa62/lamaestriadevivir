@@ -1,0 +1,165 @@
+/* Modo Claro (Por defecto) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Animaciones personalizadas */
+.animate__animated {
+    animation-duration: 1s;
+}
+/* Estilos para el banner con imagen de fondo */
+.hero-banner {
+    background-image: url('../img/banner-background-software-medellin.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 100px 0; /* Ajusta el padding para más altura */
+    position: relative; /* Necesario para el overlay */
+    height: 90vh;
+}
+
+/* Overlay oscuro para mejorar la legibilidad del texto */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima del overlay */
+.hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+/* Estilos para la sección de logos */
+.clientes-logos {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logo-cliente {
+    max-width: 120px; /* Tamaño uniforme para todos los logos */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+.logo-cliente-vertical {
+    
+    max-width: 80px; /* Tamaño uniforme para todos los logos */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+.logo-cliente:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.logo-cliente-vertical:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* Contenedor de botones flotantes */
+.contenedor-botones-flotantes {
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    display: flex;
+    flex-direction: column; /* Organiza los botones verticalmente */
+    align-items: flex-end; /* Alinea los botones a la derecha */
+    gap: 10px; /* Espacio entre botones */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilos generales para los botones flotantes */
+.btn-flotante {
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    text-decoration: none; /* Sin subrayado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Transición suave */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Efecto hover para los botones */
+.btn-flotante:hover {
+    transform: scale(1.1); /* Escalar ligeramente al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilo específico para cada botón */
+.btn-asistente {
+    background-color: #007bff; /* Color azul para el botón de asistente */
+    width: 70px;
+    height: 70px;
+}
+
+.btn-whatsapp {
+    background-color: #25d366; /* Color de WhatsApp */
+}
+
+.btn-llamada {
+    background-color: #007bff; /* Color azul para llamadas */
+}
+
+.btn-correo {
+    background-color: #d44638; /* Color rojo para correo */
+}
+
+.btn-instagram {
+    background-color: #e4405f; /* Color de Instagram */
+}
+
+.btn-youtube {
+    background-color: #ff0000; /* Color de YouTube */
+}
+
+/* Botones ocultos inicialmente */
+.botones-ocultos {
+    display: none; /* Ocultos por defecto */
+    flex-direction: column;
+    gap: 10px; /* Espacio entre botones */
+}
+
+/* Clase para mostrar los botones ocultos */
+.botones-ocultos.mostrar {
+    display: flex; /* Muestra los botones */
+}
