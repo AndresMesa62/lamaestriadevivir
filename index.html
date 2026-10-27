@@ -66,7 +66,8 @@
 }
 
 /* Slides de banners: se muestran completos sin recorte */
-.carousel-mobile .carousel-item.banner-slide a {
+.carousel-mobile .carousel-item.banner-slide a,
+.carousel-mobile .carousel-item.banner-slide picture {
     display: block;
     height: 100%;
 }
@@ -120,12 +121,18 @@
         <div class="carousel-inner">
             <div class="carousel-item banner-slide active" style="position: relative; background-color: #687DEA;">
                 <a href="docs/propuesta-soltar-para-crear-2026.pdf" target="_blank" rel="noopener" title="Ver la propuesta Soltar para Crear 2026">
-                    <img class="w-100" src="img/banner-soltar-para-crear.png" alt="Soltar para Crear - Cierra el 2026 de la mejor manera. 5 de diciembre, Los Pomos, Medellín">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/banner-soltar-para-crear-movil.png">
+                        <img class="w-100" src="img/banner-soltar-para-crear.png" alt="Soltar para Crear - Cierra el 2026 de la mejor manera. 5 de diciembre, Los Pomos, Medellín">
+                    </picture>
                 </a>
             </div>
             <div class="carousel-item banner-slide" style="position: relative; background-color: #D6F2DE;">
                 <a href="docs/mi-servicio-comunica-propuesta-empresas.pdf" target="_blank" rel="noopener" title="Ver la propuesta Mi SERvicio Comunica para empresas">
-                    <img class="w-100" src="img/banner-mi-servicio-comunica.png" alt="Mi SERvicio Comunica - ¿Buscas un espacio de formación para tu equipo?">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/banner-mi-servicio-comunica-movil.png">
+                        <img class="w-100" src="img/banner-mi-servicio-comunica.png" alt="Mi SERvicio Comunica - ¿Buscas un espacio de formación para tu equipo?">
+                    </picture>
                 </a>
             </div>
             <div class="carousel-item" style="position: relative;">
@@ -260,12 +267,18 @@
             <div class="row justify-content-center">
                 <div class="col-12 mb-4">
                     <a href="docs/propuesta-soltar-para-crear-2026.pdf" target="_blank" rel="noopener" title="Ver o descargar la propuesta Soltar para Crear 2026">
-                        <img class="img-fluid w-100 banner-propuesta" src="img/banner-soltar-para-crear.png" alt="Soltar para Crear - Cierra el 2026 de la mejor manera. 5 de diciembre, Los Pomos, Medellín" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: all 0.3s ease;">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="img/banner-soltar-para-crear-movil.png">
+                            <img class="img-fluid w-100 banner-propuesta" src="img/banner-soltar-para-crear.png" alt="Soltar para Crear - Cierra el 2026 de la mejor manera. 5 de diciembre, Los Pomos, Medellín" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: all 0.3s ease;">
+                        </picture>
                     </a>
                 </div>
                 <div class="col-12 mb-4">
                     <a href="docs/mi-servicio-comunica-propuesta-empresas.pdf" target="_blank" rel="noopener" title="Ver o descargar la propuesta Mi SERvicio Comunica para empresas">
-                        <img class="img-fluid w-100 banner-propuesta" src="img/banner-mi-servicio-comunica.png" alt="Mi SERvicio Comunica - ¿Buscas un espacio de formación para tu equipo?" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: all 0.3s ease;">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="img/banner-mi-servicio-comunica-movil.png">
+                            <img class="img-fluid w-100 banner-propuesta" src="img/banner-mi-servicio-comunica.png" alt="Mi SERvicio Comunica - ¿Buscas un espacio de formación para tu equipo?" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); transition: all 0.3s ease;">
+                        </picture>
                     </a>
                 </div>
             </div>
