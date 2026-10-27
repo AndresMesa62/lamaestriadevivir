@@ -65,6 +65,16 @@
     object-position: center;
 }
 
+/* Slides de banners: se muestran completos sin recorte */
+.carousel-mobile .carousel-item.banner-slide a {
+    display: block;
+    height: 100%;
+}
+
+.carousel-mobile .carousel-item.banner-slide img {
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     .carousel-mobile {
         height: 70vh; /* 70% de la altura de la pantalla en móviles */
@@ -135,6 +145,16 @@
                         Escúchanos en Spotify
                     </a>
                 </div>
+            </div>
+            <div class="carousel-item banner-slide" style="position: relative; background-color: #687DEA;">
+                <a href="docs/propuesta-soltar-para-crear-2026.pdf" target="_blank" rel="noopener" title="Ver la propuesta Soltar para Crear 2026">
+                    <img class="w-100" src="img/banner-soltar-para-crear.png" alt="Soltar para Crear - Cierra el 2026 de la mejor manera. 5 de diciembre, Los Pomos, Medellín">
+                </a>
+            </div>
+            <div class="carousel-item banner-slide" style="position: relative; background-color: #D6F2DE;">
+                <a href="docs/mi-servicio-comunica-propuesta-empresas.pdf" target="_blank" rel="noopener" title="Ver la propuesta Mi SERvicio Comunica para empresas">
+                    <img class="w-100" src="img/banner-mi-servicio-comunica.png" alt="Mi SERvicio Comunica - ¿Buscas un espacio de formación para tu equipo?">
+                </a>
             </div>
         </div>
         <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
